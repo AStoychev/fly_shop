@@ -1,0 +1,133 @@
+.productContainer {
+    /* margin-top: 2%; */
+    padding: 1%;
+    padding-top: 8%;
+    border: solid;
+    /* color: rgb(25, 110, 184); */
+    background-color: rgb(234, 234, 234);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+}
+
+.grid>article {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.grid>article img {
+    max-width: 80%;
+}
+
+.grid .text {
+    padding: 20px;
+}
+
+.article>div {
+    text-align: center;
+}
+
+.image>img {
+    border: solid;
+    width: 400px;
+    height: 410px;
+}
+
+.title>button{
+    width: 120px;
+    background-color: rgb(33, 105, 134);
+    color: white;
+    border: none;
+    margin-bottom: 5px;
+    border-radius: 12px;
+}
+
+.title>button:hover{
+    background-color: rgb(136, 196, 27);
+}
+
+.productAndSortItem {
+    display: flex;
+    /* border: solid; */
+}
+
+.columnOne {
+    flex: 90%;
+    padding: 10px;
+    height: 50px;
+
+    /* border: solid; */
+}
+
+.columnTwo {
+    flex: 10%;
+    padding: 10px;
+    height: 50px;
+
+    /* border: solid; */
+}
+
+.dropdown {
+    /* border: solid; */
+    margin-top: -6px;
+    text-align: left;
+}
+
+.productCounter {
+    display: flex;
+}
+
+.productCounter>p {
+    font-size: 28px;
+}
+
+.buttonDiv {
+    width: 100px;
+    width: 310px;
+    /* border: solid; */
+    padding-top: 20px;
+
+    margin-top: 10px;
+    margin-left: 500px;
+
+
+    /* position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+}
+
+.loadMoreButton {
+    color: white;
+    background-color: rgb(70, 70, 128);
+    border: none;
+    width: 300px;
+    height: 30px;
+}
+
+.noMoreProduct {
+    color: #212429;
+    /* background-color: #212429; */
+    text-align: center;
+    border: none;
+    font-weight: bold;
+    width: 300px;
+    height: 30px;
+}
+
+.labelBrand {
+    margin-left: 5%;
+}
+
+.message {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

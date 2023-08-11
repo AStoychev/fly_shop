@@ -1,0 +1,14 @@
+.headerContainer {
+    position: sticky;
+}
+
+.logo {
+    color: white;
+    font-style: italic;
+    text-decoration: none;
+    /* padding-left: 380px; */
+
+    position: absolute;
+    top: 5%;
+    left: 50%;
+}

@@ -9,6 +9,7 @@ How to start project:
 - And after that start the project with command: `npm start`
 
 I manage to do about 85% of the tast. In my opinio :).
+
 **Unfulfilled:**
 
 - I failed to make the buttons for the navigation menu.

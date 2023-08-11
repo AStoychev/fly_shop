@@ -1,27 +1,28 @@
 # fly_shop
 This is simple app which I use react
 
+How to start project:
+
+- Open project and start command: `npm i`
+- After that start command: `cd fly_shop`
+- Again start command: `npm i`
+- And after that start the project with command: `npm start`
+
+I manage to do about 85% of the tast. In my opinio :).
 **Unfulfilled:**
 
-I failed to make the buttons for the navigation menu. In my opinion :).
-
-Discounted price.
-
-Ratings ‘stars’.
-
-Errors related to CSS.
+- I failed to make the buttons for the navigation menu.
+- Discounted price.
+- Ratings ‘stars’.
+- Errors related to CSS.
 
 
 **Fulfilled:**
 
-Basically I was able to make most of the content on the page as well as the functionality.
-
-Filtering mechanism.
-
-Sorting mechanism.
-
-Load More Button.
-
+- Basically I was able to make most of the content on the page as well as the functionality.
+- Filtering mechanism.
+- Sorting mechanism.
+- Load More Button.
 
 For example data I use JSON.
 

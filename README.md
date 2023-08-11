@@ -1,7 +1,7 @@
 # fly_shop
 This is simple app which I use react
 
-Unfulfilled:
+**Unfulfilled:**
 
 I failed to make the buttons for the navigation menu. In my opinion :).
 
@@ -11,7 +11,9 @@ Ratings ‘stars’.
 
 Errors related to CSS.
 
-Fulfilled:
+
+**Fulfilled:**
+
 Basically I was able to make most of the content on the page as well as the functionality.
 
 Filtering mechanism.
@@ -19,6 +21,7 @@ Filtering mechanism.
 Sorting mechanism.
 
 Load More Button.
+
 
 For example data I use JSON.
 

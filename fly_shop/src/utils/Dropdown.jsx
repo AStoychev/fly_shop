@@ -14,7 +14,7 @@ export const DropdownSort = ({
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
                     Sort
                 </Dropdown.Toggle>
-                <Dropdown.Menu>
+                <Dropdown.Menu className={styles.dropdownToggle}>
                     <Dropdown.Item onClick={() => sortAlphabetically("az")}>Sort Alphabetical A-Z</Dropdown.Item>
                     <Dropdown.Item onClick={() => sortAlphabetically("za")}>Sort Alphabetical Z-A</Dropdown.Item>
                     <Dropdown.Item onClick={() => sortByPrice("asc")}>Price Ascending</Dropdown.Item>

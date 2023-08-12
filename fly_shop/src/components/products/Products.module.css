@@ -37,7 +37,7 @@
     height: 410px;
 }
 
-.title>button{
+.title>button {
     width: 120px;
     background-color: rgb(33, 105, 134);
     color: white;
@@ -46,7 +46,7 @@
     border-radius: 12px;
 }
 
-.title>button:hover{
+.title>button:hover {
     background-color: rgb(136, 196, 27);
 }
 
@@ -71,11 +71,14 @@
     /* border: solid; */
 }
 
-.dropdown {
-    /* border: solid; */
+/* .dropdown {
     margin-top: -6px;
     text-align: left;
-}
+} */
+
+/* .dropdownToggle {
+    
+} */
 
 .productCounter {
     display: flex;

@@ -132,7 +132,8 @@ export const Products = () => {
                 <div className={styles.productAndSortItem}>
                     <div className={styles.columnOne}>
                         {message}
-                        <div className={styles.dropdown}>
+                        <div>
+                            {/* <div className={styles.dropdown}> */}
                             <Button variant="secondary" onClick={() => setLgShow(true)}>Open Filter +</Button>
                         </div>
 

@@ -50,6 +50,14 @@
     background-color: rgb(136, 196, 27);
 }
 
+.price {
+    padding-top: 10px;
+}
+
+.star {
+    margin-bottom: 10px;
+}
+
 .productAndSortItem {
     display: flex;
     /* border: solid; */
@@ -123,9 +131,9 @@
     height: 30px;
 }
 
-.labelBrand {
+/* .labelBrand {
     margin-left: 5%;
-}
+} */
 
 .message {
     position: fixed;

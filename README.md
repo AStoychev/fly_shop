@@ -8,15 +8,11 @@ How to start project:
 - Again start command: `npm i`
 - And after that start the project with command: `npm start`
 
-I manage to do about 85% of the tast. In my opinio :).
+I manage to do about 95% of the task. In my opinio :). I suppose I can refactor some of code if I use a context provider or a state management tool.
 
 **Unfulfilled:**
 
-- I failed to make the buttons for the navigation menu.
-- Discounted price.
-- Ratings ‘stars’.
 - Errors related to CSS.
-
 
 **Fulfilled:**
 

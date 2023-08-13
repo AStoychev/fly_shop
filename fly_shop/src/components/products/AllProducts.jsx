@@ -1,19 +1,22 @@
 import { useState, useEffect } from 'react';
 
-import data_product from '../../data/data.json'
+import { sortAlphabeticallyFunction } from '../../functions/sortAlphabetically';
 import { filterPrimary } from '../../functions/filtrPrimary';
 
-import { AccordionFilter } from '../../utils/Accordion';
+import { AccordionFilter } from '../../utils/Accordion/Accordion';
 import { DropdownSort } from '../../utils/Dropdown';
-import { Card } from '../../utils/Card';
+import { Filter } from '../../utils/FilterModal/Filter';
+import { Card } from '../../utils/Cards/Card';
 
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
+import data_separated from '../../data/data_separated.json'
+
 import styles from './Products.module.css'
 
-export const Products = () => {
+export const AllProducts = () => {
 
     // Functionality Load More
     const [items, setItems] = useState([]);
@@ -21,7 +24,7 @@ export const Products = () => {
     const [totalPage, setTotalPage] = useState(0);
 
     // Functionality Sort
-    const [sorted, setSorted] = useState({ sorted: "title" });
+    // const [sorted, setSorted] = useState({ sorted: "title" });
 
     // Modal
     const [lgShow, setLgShow] = useState(false);
@@ -29,7 +32,8 @@ export const Products = () => {
     // Filter
     const [checked, setChecked] = useState([]);
     const [filtred, setFiltred] = useState(false);
-    const [types, setTypes] = useState("")
+    const [certificate, setCertificate] = useState("");
+    const [price, setPrice] = useState("");
 
     // Message on add product
     const [message, setMessage] = useState("")
@@ -41,11 +45,12 @@ export const Products = () => {
     useEffect(() => {
         const fetchData = () => {
             try {
-                const product = data_product[page];
-                setItems(pre => [...pre, ...product].filter(onlyUnique));
+                const load_more = page * 6
+                const product = data_separated.slice(0, load_more);
+                setItems(product);
+                // setItems(pre => [...pre, ...product].filter(onlyUnique));
 
-                // This is total of page in my JSON data, but if we use some other data we can change 3 with other dynamically
-                setTotalPage(3);
+                setTotalPage(Math.ceil(data_separated.length / 6));
             } catch (error) {
                 console.log(error)
             }
@@ -53,9 +58,12 @@ export const Products = () => {
         fetchData()
     }, [page])
 
+    // Sort Alphabetically
+    // const sortAlphabetically = sortAlphabeticallyFunction()
+    // setItems(sortAlphabetically)
+
     const sortAlphabetically = (sortType) => {
-        console.log(sortType)
-        setSorted({ sorted: "title" });
+        // setSorted({ sorted: "title" });
         const itemsCopy = [...items];
         itemsCopy.sort((titleA, titleB) => {
             const titleItemA = titleA.title;
@@ -71,10 +79,11 @@ export const Products = () => {
     }
 
     const sortByPrice = (sortType) => {
-        console.log(sortType)
-        setSorted({ sorted: "price" });
+        // setSorted({ sorted: "price" });
         const itemsCopy = [...items];
         itemsCopy.sort((itemA, itemB) => {
+            // let priceA = itemA.discountPrice ? itemA.discountPrice : itemA.price;
+            // let priceB = itemB.discountPrice ? itemB.discountPrice : itemB.price;
             if (sortType === "asc") {
                 return itemA.price - itemB.price
             } else {
@@ -109,7 +118,8 @@ export const Products = () => {
     }
 
     // Filter
-    const filtred_item = filterPrimary(data_product, checked, types)
+    const filtred_item = filterPrimary(data_separated, checked, certificate, price)
+
     const onFilter = () => {
         if (lgShow) {
             setChecked([])
@@ -121,19 +131,23 @@ export const Products = () => {
         }
         setLgShow(false)
     }
-    const onTypeChange = (e) => {
-        setTypes(e.target.value)
-    }
+    const onCertificateChange = (e) => {
+        setCertificate(e.target.value)
+    };
+
+    const onPriceChange = (e) => {
+        setPrice(e.target.value)
+    };
 
     return (
         <div className={styles.productContainer}>
             <div id="app" className="container">
-
+                <h1>All Products</h1>
                 <div className={styles.productAndSortItem}>
                     <div className={styles.columnOne}>
                         {message}
+            
                         <div>
-                            {/* <div className={styles.dropdown}> */}
                             <Button variant="secondary" onClick={() => setLgShow(true)}>Open Filter +</Button>
                         </div>
 
@@ -145,19 +159,26 @@ export const Products = () => {
                         >
                             <Modal.Header closeButton>
                                 <Modal.Title id="example-modal-sizes-title-lg">
-                                    Filterered Products {filtred_item.length}
+                                    Filtered Products {filtred_item.length}
                                 </Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
-                                <AccordionFilter onBrandChange={onBrandChange} types={types} onTypeChange={onTypeChange} />
-                                <button onClick={onFilter}>Show Result</button>
+                                <AccordionFilter
+                                    onBrandChange={onBrandChange}
+                                    certificate={certificate}
+                                    onCertificateChange={onCertificateChange}
+                                    price={price}
+                                    onPriceChange={onPriceChange}
+                                />
+                                <Button variant="primary" onClick={onFilter}>Show Result</Button>
                             </Modal.Body>
                         </Modal>
 
                     </div>
 
                     <div className={styles.columnTwo}>
-                        <DropdownSort sortAlphabetically={sortAlphabetically} sortByPrice={sortByPrice} />
+                        {/* Can remove items */}
+                        <DropdownSort sortAlphabetically={sortAlphabetically} items={items} sortByPrice={sortByPrice} />
                     </div>
                 </div>
 

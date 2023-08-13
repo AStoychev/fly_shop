@@ -11,18 +11,20 @@ import styles from './Header.module.css'
 export const Header = () => {
     return (
         <div className={styles.headerContainer}>
-            <Navbar bg="dark" data-bs-theme="dark">
+            <Navbar bg="dark" data-bs-theme="dark" className={styles.navBar}>
                 <Container>
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#features">Wings</Nav.Link>
-                        <Nav.Link href="#pricing">Harness</Nav.Link>
+
+                        <Link className={styles.navLink} to="/">Home</Link>
+                        <Link className={styles.navLink} to="/wings">Wings</Link>
+                        <Link className={styles.navLink} to="/harnesses">Harnesses</Link>
 
                         <Link className={styles.logo} to="/">
                             <div>FlyShop 2023
                                 <img src='../images/paper-plane.png' />
                             </div>
                         </Link>
+
                     </Nav>
                 </Container>
             </Navbar>

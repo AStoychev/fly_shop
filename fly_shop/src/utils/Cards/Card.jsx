@@ -1,12 +1,15 @@
 import React from 'react';
 
-import styles from '../components/products/Products.module.css'
+import { TryDiscount } from './Discount';
+import { StarRating } from '../Stars/Stars';
+
+import styles from '../../components/products/Products.module.css'
 
 export const Card = ({
     item,
     onAdd,
 }) => {
-
+    
     return (
         <article className={styles.article} key={item.id}>
             <div className={styles.title}>
@@ -18,12 +21,18 @@ export const Card = ({
             </div>
 
             <div className={styles.description}>
-                {item.description} - {item.type}
+                This is {item.description} | Type {item.type} | Certificate {item.certificate}
             </div>
 
             <div className={styles.price}>
-                {item.price}$
+                <TryDiscount item={item}/>
             </div>
+
+            <div className={styles.star}>
+                <StarRating />
+            </div>
+
+
             <div className={styles.title}>
                 <button onClick={onAdd}>Add to cart</button>
             </div>

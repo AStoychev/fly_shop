@@ -1,0 +1,10 @@
+.oldPrice {
+    text-decoration: line-through;
+    text-decoration-color: rgb(228, 68, 68);
+}
+
+.discountOrPrice {
+    margin: auto;
+    width: 70%;
+    padding: 1px;
+}

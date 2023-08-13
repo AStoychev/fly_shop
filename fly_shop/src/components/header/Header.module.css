@@ -6,6 +6,10 @@
     /* position: sticky; */
 }
 
+.navBar {
+    height: 55px;
+}
+
 .logo {
     color: white;
     font-style: italic;
@@ -15,4 +19,19 @@
     position: absolute;
     top: 5%;
     left: 50%;
+}
+
+.navLink {
+    font-size: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: rgb(210, 206, 200);
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* border: solid;
+    border-color: wheat; */
+}
+
+.navLink:hover {
+    color: rgb(219, 255, 255);
 }

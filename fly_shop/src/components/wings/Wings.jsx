@@ -72,7 +72,7 @@ export const Wings = () => {
         }
         setChecked(updatedList);
     }
-    
+
     const onCertificateChange = (e) => {
         setCertificate(e.target.value)
     };
@@ -101,9 +101,7 @@ export const Wings = () => {
     return (
         <div className={styles.productContainer}>
             <div id="app" className="container">
-
                 <CategoryNameDescription props={"Wings"} />
-
                 <div className={styles.productAndSortItem}>
                     <div className={styles.columnOne}>
                         <Filter
@@ -123,23 +121,17 @@ export const Wings = () => {
                         <DropdownSort sortAlphabetically={sortAlphabetically} sortByPrice={sortByPrice} />
                     </div>
                 </div>
-
                 <ProductsCounter items={items} />
-
                 <div className={styles.grid}>
                     {items && items.map(item => (
                         < Card item={item} key={item.id} />
                     ))}
                 </div>
-
                 {!filtred &&
                     <div className={styles.buttonDiv}>
                         {page < totalPage
                             ? (
-                                <button
-                                    className={styles.loadMoreButton}
-                                    onClick={() => setPage(page + 1)}
-                                >
+                                <button className={styles.loadMoreButton} onClick={() => setPage(page + 1)}>
                                     Load More
                                 </button>
                             )

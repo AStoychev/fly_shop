@@ -136,10 +136,7 @@ export const Harnesses = () => {
                     <div className={styles.buttonDiv}>
                         {page < totalPage
                             ? (
-                                <button
-                                    className={styles.loadMoreButton}
-                                    onClick={() => setPage(page + 1)}
-                                >
+                                <button className={styles.loadMoreButton} onClick={() => setPage(page + 1)}>
                                     Load More
                                 </button>
                             )

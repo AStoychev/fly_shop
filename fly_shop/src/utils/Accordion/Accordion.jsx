@@ -21,7 +21,7 @@ export const AccordionFilter = ({
 
                     {brandConstants.map(item => (
                         <label className={styles.labelBrand} key={item}>
-                            <input type="checkbox" value={item} onChange={onBrandChange} />
+                            <input type="checkbox" value={item} onChange={onBrandChange} className={styles.inputStyle}/>
                             {item}
                         </label>
                     ))}

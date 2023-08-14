@@ -10,20 +10,23 @@ export const TryDiscount = ({
         return (
             <div className={styles.discountOrPrice}>
                 <Stack direction="horizontal" gap={3}>
-                    <h5>
-                        <Badge bg="secondary">Old Price: <span className={styles.oldPrice}>${item.price}</span></Badge>
-                    </h5>
-                    <h5>
-                        <Badge bg="success">New Price: ${item.discountPrice}</Badge>
-                    </h5>
+                    <div className={styles.firstDiv}>
+                        <Badge bg="secondary">Old Price</Badge>
+                        <span className={styles.oldPrice}>${item.price}</span>
+                    </div>
+                    <div className={styles.secondDiv}>
+                        <Badge bg="success">New Price</Badge>
+                        ${item.discountPrice}
+                    </div>
                 </Stack>
             </div>
         )
     }
     return (
-        <div>
-            <h5>
-                <Badge bg="success">Price: ${item.price}</Badge>
-            </h5>
+        <div >
+            <div className={styles.secondDiv}>
+                <Badge bg="success">Price</Badge>
+                ${item.price}
+            </div>
         </div>)
 }

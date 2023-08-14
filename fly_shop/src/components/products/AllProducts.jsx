@@ -3,8 +3,9 @@ import { useState, useEffect } from 'react';
 import { sortAlphabeticallyFunction } from '../../functions/sortAlphabetically';
 import { filterPrimary } from '../../functions/filtrPrimary';
 
+import { CategoryNameDescription } from '../../utils/CategoryNameDescription/CategoryNameDescription';
 import { AccordionFilter } from '../../utils/Accordion/Accordion';
-import { DropdownSort } from '../../utils/Dropdown';
+import { DropdownSort } from '../../utils/Dropdown/Dropdown';
 import { Filter } from '../../utils/FilterModal/Filter';
 import { Card } from '../../utils/Cards/Card';
 
@@ -12,7 +13,7 @@ import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-import data_separated from '../../data/data_separated.json'
+import data from '../../data/data.json'
 
 import styles from './Products.module.css'
 
@@ -46,11 +47,11 @@ export const AllProducts = () => {
         const fetchData = () => {
             try {
                 const load_more = page * 6
-                const product = data_separated.slice(0, load_more);
+                const product = data.slice(0, load_more);
                 setItems(product);
                 // setItems(pre => [...pre, ...product].filter(onlyUnique));
 
-                setTotalPage(Math.ceil(data_separated.length / 6));
+                setTotalPage(Math.ceil(data.length / 6));
             } catch (error) {
                 console.log(error)
             }
@@ -118,7 +119,7 @@ export const AllProducts = () => {
     }
 
     // Filter
-    const filtred_item = filterPrimary(data_separated, checked, certificate, price)
+    const filtred_item = filterPrimary(data, checked, certificate, price)
 
     const onFilter = () => {
         if (lgShow) {
@@ -142,16 +143,18 @@ export const AllProducts = () => {
     return (
         <div className={styles.productContainer}>
             <div id="app" className="container">
-                <h1>All Products</h1>
+                <CategoryNameDescription props={"All product"}/>
+
                 <div className={styles.productAndSortItem}>
                     <div className={styles.columnOne}>
                         {message}
-            
+
                         <div>
                             <Button variant="secondary" onClick={() => setLgShow(true)}>Open Filter +</Button>
                         </div>
 
                         <Modal
+                            className={styles.modalContainer}
                             size="lg"
                             show={lgShow}
                             onHide={() => setLgShow(false)}
@@ -173,7 +176,6 @@ export const AllProducts = () => {
                                 <Button variant="primary" onClick={onFilter}>Show Result</Button>
                             </Modal.Body>
                         </Modal>
-
                     </div>
 
                     <div className={styles.columnTwo}>

@@ -8,7 +8,8 @@ import { Footer } from './components/footer/Footer';
 
 function App() {
     return (
-        <>  <Header />
+        <> 
+             <Header />
             <Routes>
                 <Route path='/' element={<AllProducts />} />
                 <Route path='/wings' element={<Wings />} />

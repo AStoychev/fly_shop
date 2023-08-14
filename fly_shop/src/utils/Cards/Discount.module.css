@@ -1,10 +1,20 @@
+.discountOrPrice {
+    /* margin: auto; */
+    width: 100%;
+    padding-left: 13%;
+}
+
 .oldPrice {
     text-decoration: line-through;
     text-decoration-color: rgb(228, 68, 68);
 }
 
-.discountOrPrice {
-    margin: auto;
-    width: 70%;
-    padding: 1px;
+.firstDiv {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.secondDiv {
+    font-weight: bold;
+    font-size: 20px;
 }

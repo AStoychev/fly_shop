@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
 
-import data_product from '../../data/data.json'
+import { CategoryNameDescription } from '../../utils/CategoryNameDescription/CategoryNameDescription';
 import { filterPrimary } from '../../functions/filtrPrimary';
 import { takeType } from '../../functions/takeType';
 
 import { AccordionFilter } from '../../utils/Accordion/Accordion';
-import { DropdownSort } from '../../utils/Dropdown';
+import { DropdownSort } from '../../utils/Dropdown/Dropdown';
 import { Card } from '../../utils/Cards/Card';
 
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-import data_separated from '../../data/data_separated.json'
+import data from '../../data/data.json'
 
 import styles from './Products.module.css'
 
@@ -46,12 +46,12 @@ export const Wings = () => {
         const fetchData = () => {
             try {
                 const load_more = page * 6
-                const product = takeType(data_separated, "wing").slice(0, load_more);
-                // const product = data_separated.slice(0, load_more);
+                const product = takeType(data, "wing").slice(0, load_more);
+                // const product = data.slice(0, load_more);
                 const wings = takeType(product, "wing")
 
                 setItems(wings)
-                const totalItems = data_separated.map(x => (
+                const totalItems = data.map(x => (
                     x.type === 'wing'
                 ))
 
@@ -104,10 +104,10 @@ export const Wings = () => {
     }
 
     // Filter
-    const filtredItem = filterPrimary(data_separated, checked, certificate, price);
+    const filtredItem = filterPrimary(data, checked, certificate, price);
     const filtredWing = takeType(filtredItem, "wing");
 
-    // console.log(11111, data_separated)
+    // console.log(11111, data)
     // console.log(111, filtredWing)
 
     const onFilter = () => {
@@ -147,7 +147,8 @@ export const Wings = () => {
     return (
         <div className={styles.productContainer}>
             <div id="app" className="container">
-                <h1>Wings</h1>
+
+                <CategoryNameDescription props={"Wings"} />
 
                 <div className={styles.productAndSortItem}>
                     <div className={styles.columnOne}>
@@ -158,6 +159,7 @@ export const Wings = () => {
                         </div>
 
                         <Modal
+                            className={styles.modalContainer}
                             size="lg"
                             show={lgShow}
                             onHide={() => setLgShow(false)}

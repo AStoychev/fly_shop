@@ -1,0 +1,17 @@
+.productDescription {
+    background-image: url("../../../public/images/mountains.jpg");
+    width: 100%;
+    height: 400px;
+}
+
+.headerProductType {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+.descriptionProductType {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}

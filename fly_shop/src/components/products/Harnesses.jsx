@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
 
-import data_product from '../../data/data.json'
 import { filterPrimary } from '../../functions/filtrPrimary';
 import { takeType } from '../../functions/takeType';
 
+import { CategoryNameDescription } from '../../utils/CategoryNameDescription/CategoryNameDescription';
 import { AccordionFilter } from '../../utils/Accordion/Accordion';
-import { DropdownSort } from '../../utils/Dropdown';
+import { DropdownSort } from '../../utils/Dropdown/Dropdown';
 import { Card } from '../../utils/Cards/Card';
 
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-import data_separated from '../../data/data_separated.json'
+import data from '../../data/data.json'
 
 import styles from './Products.module.css'
 
@@ -42,13 +42,13 @@ export const Harnesses = () => {
         const fetchData = () => {
             try {
                 const load_more = page * 6
-                const product = takeType(data_separated, "harness").slice(0, load_more);
-                // const product = data_separated.slice(0, load_more);
+                const product = takeType(data, "harness").slice(0, load_more);
+                // const product = data.slice(0, load_more);
 
                 const harnesses = takeType(product, "harness")
                 setItems(harnesses)
 
-                const totalItems = data_separated.map(x => (
+                const totalItems = data.map(x => (
                     x.type === 'harness'
                 ))
 
@@ -101,10 +101,10 @@ export const Harnesses = () => {
     }
 
     // Filter
-    const filtredItem = filterPrimary(data_separated, checked, certificate, price);
+    const filtredItem = filterPrimary(data, checked, certificate, price);
     const filtredWing = takeType(filtredItem, "harness");
 
-    // console.log(11111, data_separated)
+    // console.log(11111, data)
     // console.log(111, filtredWing)
 
     const onFilter = () => {
@@ -145,7 +145,8 @@ export const Harnesses = () => {
     return (
         <div className={styles.productContainer}>
             <div id="app" className="container">
-                <h1>Harnesses</h1>
+
+                <CategoryNameDescription props={"Harnesses"}/>
 
                 <div className={styles.productAndSortItem}>
                     <div className={styles.columnOne}>
@@ -156,6 +157,7 @@ export const Harnesses = () => {
                         </div>
 
                         <Modal
+                            className={styles.modalContainer}
                             size="lg"
                             show={lgShow}
                             onHide={() => setLgShow(false)}

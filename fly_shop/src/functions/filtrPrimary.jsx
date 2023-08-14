@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const filterPrimary = (data_product, checked, certificate, price) => {
     const filter = []
     const filtred_item = []
@@ -38,9 +36,6 @@ export const filterPrimary = (data_product, checked, certificate, price) => {
                 filtred_item.push(filter[item]);
             }
 
-            // if (filter[item].price >= min && filter[item].price <= max) {
-            //     filtred_item.push(filter[item]);
-            // }
         }
     }
     

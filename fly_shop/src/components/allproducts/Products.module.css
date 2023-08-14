@@ -13,8 +13,9 @@
     width: 100%;
     /* overflow-y: scroll; */
     padding: 1%;
-    padding-top: 4%;
-    border: solid;
+    padding-top: 3%;
+    /* padding-top: 4%; */
+    /* border: solid; */
     background-color: rgb(234, 234, 234);
 }
 
@@ -89,6 +90,7 @@
 
 .productAndSortItem {
     display: flex;
+    padding-top: 10px;
     /* border: solid; */
 }
 
@@ -121,13 +123,13 @@
     
 } */
 
-.productCounter {
+/* .productCounter {
     display: flex;
-}
+} */
 
-.productCounter>p {
+/* .productCounter>p {
     font-size: 28px;
-}
+} */
 
 .buttonDiv {
     display: flex;

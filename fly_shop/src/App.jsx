@@ -1,15 +1,15 @@
 import { Routes, Route } from 'react-router-dom';
 
 import { Header } from './components/header/Header';
-import { AllProducts } from './components/products/AllProducts';
-import { Wings } from './components/products/Wings';
-import { Harnesses } from './components/products/Harnesses';
+import { AllProducts } from './components/allproducts/AllProducts';
+import { Wings } from './components/wings/Wings';
+import { Harnesses } from './components/harnesses/Harnesses';
 import { Footer } from './components/footer/Footer';
 
 function App() {
     return (
-        <> 
-             <Header />
+        <>
+            <Header />
             <Routes>
                 <Route path='/' element={<AllProducts />} />
                 <Route path='/wings' element={<Wings />} />

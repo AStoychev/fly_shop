@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const takeType = (product, type) => {
     let producType = []
     for (let i in product) {

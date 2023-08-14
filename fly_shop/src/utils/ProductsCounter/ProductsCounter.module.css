@@ -1,0 +1,9 @@
+.productCounter {
+    display: flex;
+}
+
+.productCounter>p {
+    font-size: 28px;
+    font-style: italic;
+    font-weight:500;
+}

@@ -21,7 +21,7 @@ export const Header = () => {
 
                         <Link className={styles.logo} to="/">
                             <div>FlyShop 2023
-                                <img src='../images/paper-plane.png' />
+                                <img src='../images/paper-plane.png' alt='logo'/>
                             </div>
                         </Link>
 

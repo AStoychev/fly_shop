@@ -12,7 +12,6 @@ export const Footer = () => {
                     C4 Nexus
                 </Link>
             </div>
-            {/* <div className={styles.paragraphFooter}>Contacts</div> */}
             <div className={styles.paragraphFooter}>
                 <Link className={styles.footerImagrLink}><img src='../images/instagram-logo.png' alt='instagram' className={styles.imageFooter} /></Link>
                 <Link className={styles.footerImagrLink}><img src='../images/facebook.png' alt='facebook' className={styles.imageFooter} /></Link>
@@ -20,7 +19,6 @@ export const Footer = () => {
                 <Link className={styles.footerImagrLink}><img src='../images/mail.png' alt='mail' className={styles.imageFooter} /></Link>
                 <Link className={styles.footerImagrLink}><img src='../images/apple.png' alt='instagram' className={styles.imageFooter} /></Link>
             </div>
-            {/* <p className={styles.paragraphFooter}>This is shop for paragliding equipment</p> */}
         </div>
     );
 }

@@ -138,13 +138,11 @@ export const AllProducts = () => {
                 </div>
 
                 <ProductsCounter items={items} />
-
                 <div className={styles.grid}>
                     {items && items.map(item => (
                         < Card item={item} key={item.id} />
                     ))}
                 </div>
-
                 {!filtred &&
                     <div className={styles.buttonDiv}>
                         {page < totalPage

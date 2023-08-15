@@ -9,7 +9,7 @@ How to start project:
 - And after that start the project with command: `npm start`
 
 I manage to do about 95% of the task. In my opinion :). I suppose I can refactor some of code if I use a context provider or a state management tool.
-The application has been tested on the following browsers: Google Chrome, Firefox, Edge
+The application has been tested on the following browsers: Google Chrome, Firefox, Edge.
 
 **Unfulfilled:**
 

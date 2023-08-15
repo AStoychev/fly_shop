@@ -2,8 +2,11 @@ import { useState, useEffect } from 'react';
 
 import { sortAlphabeticallyFunction } from '../../functions/sortAlphabetically';
 import { sortByPriceFunction } from '../../functions/sortByPriceFunction';
+import { onlyUnique } from '../../functions/onlyUnique';
 import { filterPrimary } from '../../functions/filtrPrimary';
 import { takeType } from '../../functions/takeType';
+
+import { Search } from '../search/Search';
 
 import { CategoryNameDescription } from '../../utils/CategoryNameDescription/CategoryNameDescription';
 import { AccordionFilter } from '../../utils/Accordion/Accordion';
@@ -87,20 +90,42 @@ export const Wings = () => {
 
     const onFilter = () => {
         if (lgShow) {
-            setChecked([])
+            setChecked([]);
+            setCertificate("");
+            setPrice("");
         }
 
         if (filtredWing.length > 0) {
-            setItems(filtredWing);
+            setItems(filtredWing.filter(onlyUnique));
             setFiltred(true);
             setLgShow(false);
         }
         setLgShow(false)
     }
 
+    // Search
+    const getDataFromSearch = (newData) => {
+        let searchData = []
+        for (let i in data) {
+            if (data[i].type === "wing") {
+                if (data[i].title === newData)
+                    searchData.push(data[i])
+            }
+        }
+        if (searchData.length) {
+            setItems(searchData);
+            setFiltred(true);
+        }
+    }
+
     return (
         <div className={styles.productContainer}>
             <div id="app" className="container">
+
+                {/* <div>
+                    <Search getDataFromSearch={getDataFromSearch} />
+                </div> */}
+
                 <CategoryNameDescription props={"Wings"} />
                 <div className={styles.productAndSortItem}>
                     <div className={styles.columnOne}>

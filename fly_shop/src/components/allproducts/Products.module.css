@@ -1,30 +1,41 @@
 .productContainer {
-    /* position: relative; */
-    /* top: 0px;
-    left: 0px;
-    bottom: 0px; */
     overflow: auto;
     z-index: 1;
 
-    /* padding-top: 350px; */
     margin-top: calc(16px + 1em);
     margin-bottom: calc(16px + 3em);
-    /* height: calc(100% - 50px); */
     width: 100%;
-    /* overflow-y: scroll; */
     padding: 1%;
-    padding-top: 3%;
-    /* padding-top: 4%; */
-    /* border: solid; */
+    padding-top: 50px;
+    /* padding-top: 3%; */
     background-color: rgb(234, 234, 234);
 }
 
 .grid {
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
+    gap: 1rem;
+
+    /* This CSS don't change rows */
+    /* display: grid;
     grid-template-columns: repeat(3, minmax(280px, 1fr));
     grid-gap: 20px;
-    align-items: stretch;
+    align-items: stretch; */
 }
+
+@media (min-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 
 .grid>article {
     border: 1px solid #ccc;
@@ -70,36 +81,15 @@
     margin-bottom: 10px;
 }
 
-/* .productDescription {
-    background-image: url("../../../public/images/mountains.jpg");
-    width: 100%;
-    height: 400px;
-} */
-
-/* .headerProductType {
-    color: white;
-    text-align: center;
-    font-style: italic;
-} */
-
-/* .descriptionProductType {
-    color: white;
-    text-align: center;
-    font-style: italic;
-} */
-
 .productAndSortItem {
     display: flex;
     padding-top: 10px;
-    /* border: solid; */
 }
 
 .columnOne {
     flex: 90%;
     padding: 10px;
     height: 50px;
-
-    /* border: solid; */
 }
 
 .modalContainer {
@@ -110,50 +100,13 @@
     flex: 10%;
     padding: 10px;
     height: 50px;
-
-    /* border: solid; */
 }
-
-/* .dropdown {
-    margin-top: -6px;
-    text-align: left;
-} */
-
-/* .dropdownToggle {
-    
-} */
-
-/* .productCounter {
-    display: flex;
-} */
-
-/* .productCounter>p {
-    font-size: 28px;
-} */
 
 .buttonDiv {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
-
-    /* flex: 10%;
-    padding: 10px;
-    height: 50px; */
-
-    /* width: 100px;
-    width: 310px;
-    padding-top: 20px; */
-
-    /* margin-top: 10px;
-    margin-left: 500px; */
-
-
-    /* position: fixed;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); */
 }
 
 .loadMoreButton {
@@ -171,17 +124,12 @@
 
 .noMoreProduct {
     color: #212429;
-    /* background-color: #212429; */
     text-align: center;
     border: none;
     font-weight: bold;
     width: 300px;
     height: 30px;
 }
-
-/* .labelBrand {
-    margin-left: 5%;
-} */
 
 .message {
     position: fixed;

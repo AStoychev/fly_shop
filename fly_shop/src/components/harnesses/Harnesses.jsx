@@ -2,8 +2,11 @@ import { useState, useEffect } from 'react';
 
 import { sortAlphabeticallyFunction } from '../../functions/sortAlphabetically';
 import { sortByPriceFunction } from '../../functions/sortByPriceFunction';
+import { onlyUnique } from '../../functions/onlyUnique';
 import { filterPrimary } from '../../functions/filtrPrimary';
 import { takeType } from '../../functions/takeType';
+
+import { Search } from '../search/Search';
 
 import { CategoryNameDescription } from '../../utils/CategoryNameDescription/CategoryNameDescription';
 import { AccordionFilter } from '../../utils/Accordion/Accordion';
@@ -29,7 +32,7 @@ export const Harnesses = () => {
     // Filter
     const [checked, setChecked] = useState([]);
     const [filtred, setFiltred] = useState(false);
-    const [certificate, setCerificate] = useState("");
+    const [certificate, setCertificate] = useState("");
     const [price, setPrice] = useState("");
 
     const handleClose = () => setLgShow(false);
@@ -74,7 +77,7 @@ export const Harnesses = () => {
         setChecked(updatedList);
     };
     const onCertificateChange = (e) => {
-        setCerificate(e.target.value)
+        setCertificate(e.target.value)
     };
 
     const onPriceChange = (e) => {
@@ -87,20 +90,41 @@ export const Harnesses = () => {
 
     const onFilter = () => {
         if (lgShow) {
-            setChecked([])
+            setChecked([]);
+            setCertificate("");
+            setPrice("");
         };
 
         if (filtredHarness.length > 0) {
-            setItems(filtredHarness);
+            setItems(filtredHarness.filter(onlyUnique));
             setFiltred(true);
             setLgShow(false);
         };
         setLgShow(false)
     };
 
+    // Search
+    const getDataFromSearch = (newData) => {
+        let searchData = []
+        for (let i in data) {
+            if (data[i].type === "harness") {
+                if (data[i].title === newData)
+                    searchData.push(data[i])
+            }
+        }
+        if (searchData.length) {
+            setItems(searchData);
+            setFiltred(true);
+        }
+    }
+
     return (
         <div className={styles.productContainer}>
             <div id="app" className="container">
+
+                {/* <div>
+                    <Search getDataFromSearch={getDataFromSearch} />
+                </div> */}
 
                 <CategoryNameDescription props={"Harnesses"} />
 

@@ -13,11 +13,11 @@ export const Footer = () => {
                 </Link>
             </div>
             <div className={styles.paragraphFooter}>
-                <Link className={styles.footerImagrLink}><img src='../images/instagram-logo.png' alt='instagram' className={styles.imageFooter} /></Link>
-                <Link className={styles.footerImagrLink}><img src='../images/facebook.png' alt='facebook' className={styles.imageFooter} /></Link>
-                <Link className={styles.footerImagrLink}><img src='../images/twitter.png' alt='twitter' className={styles.imageFooter} /></Link>
-                <Link className={styles.footerImagrLink}><img src='../images/mail.png' alt='mail' className={styles.imageFooter} /></Link>
-                <Link className={styles.footerImagrLink}><img src='../images/apple.png' alt='instagram' className={styles.imageFooter} /></Link>
+                <Link className={styles.footerImageLink}><img src='../images/instagram-logo.png' alt='instagram' className={styles.imageFooter} /></Link>
+                <Link className={styles.footerImageLink}><img src='../images/facebook.png' alt='facebook' className={styles.imageFooter} /></Link>
+                <Link className={styles.footerImageLink}><img src='../images/twitter.png' alt='twitter' className={styles.imageFooter} /></Link>
+                <Link className={styles.footerImageLink}><img src='../images/mail.png' alt='mail' className={styles.imageFooter} /></Link>
+                <Link className={styles.footerImageLink}><img src='../images/apple.png' alt='instagram' className={styles.imageFooter} /></Link>
             </div>
         </div>
     );

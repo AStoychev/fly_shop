@@ -6,8 +6,7 @@
         "description": "Alpha 5",
         "certificate": "A",
         "image": "https://img.ricardostatic.ch/images/344b5de4-506c-4f50-92a2-99050ba709c2/t_1000x750/gleitschirm-advance-alpha-5",
-        "price": 1500,
-        "stars": 5
+        "price": 1500
     },
     {
         "id": "2",
@@ -16,8 +15,7 @@
         "description": "Omega 10",
         "certificate": "D",
         "image": "https://www.flugschule-mergenthaler.de/wp-content/uploads/OXA-3-Default-View1000x1000px.webp",
-        "price": 3500,
-        "stars": 5
+        "price": 3500
     },
     {
         "id": "5.1",
@@ -27,8 +25,7 @@
         "certificate": "A",
         "image": "https://www.freedom-parapente.fr/media/cache/shop_items_detail/2021/07/sellette-niviuk-konvers-2.jpeg",
         "price": 2100,
-        "discountPrice": 1900,
-        "stars": 5
+        "discountPrice": 1900
     },
     {
         "id": "3",
@@ -37,8 +34,7 @@
         "description": "Sigma 11",
         "certificate": "C",
         "image": "https://www.flugschule-mergenthaler.de/wp-content/uploads/Sigma-11-Default-View-1000x1000px.webp",
-        "price": 4100,
-        "stars": 5
+        "price": 4100
     },
     {
         "id": "4",
@@ -47,8 +43,7 @@
         "description": "Moxie",
         "certificate": "A",
         "image": "https://cdn.sanity.io/images/lbhlofgm/production/47d1048027bbaae11961c890ba3f420307421f1b-2500x1667.jpg?w=2500&h=1667&auto=format",
-        "price": 1500,
-        "stars": 5
+        "price": 1500
     },
     {
         "id": "5",
@@ -57,8 +52,7 @@
         "description": "Mojo 6",
         "certificate": "A",
         "image": "https://cdn.sanity.io/images/lbhlofgm/production/126677bfe1aca81eded147cf6ea0d95269c38f8c-1800x1013.jpg?w=1800&h=1013&auto=format",
-        "price": 1300,
-        "stars": 5
+        "price": 1300
     },
     {
         "id": "6",
@@ -68,8 +62,7 @@
         "certificate": "B",
         "image": "https://cdn.sanity.io/images/lbhlofgm/production/68178374e878b4b9085f74c05e6796000f783442-2500x1667.jpg?w=2500&h=1667&auto=format",
         "price": 2500,
-        "discountPrice": 2300,
-        "stars": 5
+        "discountPrice": 2300
     },
     {
         "id": "7",
@@ -79,8 +72,7 @@
         "certificate": "B",
         "image": "https://www.freedom-parapente.fr/media/cache/home_square_small/2022/10/hook-6-test-freedom-parapente.jpg",
         "price": 2100,
-        "discountPrice": 2001,
-        "stars": 5
+        "discountPrice": 2001
     },
     {
         "id": "8",
@@ -89,8 +81,7 @@
         "description": "Ikuma 2",
         "certificate": "C",
         "image": "https://stenar.si/sites/default/files/ikuma2main2.jpg",
-        "price": 900,
-        "stars": 5
+        "price": 900
     },
     {
         "id": "9",
@@ -99,8 +90,7 @@
         "description": "Takoo 5",
         "certificate": "B",
         "image": "https://niviuk.com/tmp/images/BIBLIOTECA_ITEMS_331_TAKOO_5_NIVIUK_PARAGLIDERS_W_400_Q_75.PNG",
-        "price": 3050,
-        "stars": 5
+        "price": 3050
     },
     {
         "id": "10",
@@ -109,8 +99,7 @@
         "description": "Mescal 6",
         "certificate": "A",
         "image": "https://paraglide-shop.com/2113-thickbox_default/skywalk-mescal-6.jpg",
-        "price": 940,
-        "stars": 5
+        "price": 940
     },
     {
         "id": "11",
@@ -119,8 +108,7 @@
         "description": "Tequila 5",
         "certificate": "B",
         "image": "https://www.dhv.de/dbfiles/managed/muster/2018/04/t3_th1.jpg",
-        "price": 1000,
-        "stars": 5
+        "price": 1000
     },
     {
         "id": "12",
@@ -129,8 +117,7 @@
         "description": "Cayenne 6",
         "certificate": "C",
         "image": "https://www.paraglide.co.uk/store/images/ihlarge/Cayenne5.JPG",
-        "price": 3100,
-        "stars": 5
+        "price": 3100
     },
     {
         "id": "13",
@@ -139,8 +126,7 @@
         "description": "Success 2",
         "certificate": "A",
         "image": "https://www.flymanilla.com/portals/5/Axess%205%20yellow%201000x1000px.png",
-        "price": 1450,
-        "stars": 5
+        "price": 1450
     },
     {
         "id": "14",
@@ -149,8 +135,7 @@
         "description": "Weightless",
         "certificate": "C",
         "image": "https://paraglidingequipment.com/wp-content/uploads/2022/02/Advance-Weightless-Ultralight-XC-Harness-1.png",
-        "price": 2100,
-        "stars": 5
+        "price": 2100
     },
     {
         "id": "15",
@@ -159,8 +144,7 @@
         "description": "Axess 5",
         "certificate": "A",
         "image": "https://shop.mosailes.com/2508-thickbox_default/harness-paragliding-advance-success-5.jpg",
-        "price": 1500,
-        "stars": 5
+        "price": 1500
     },
     {
         "id": "16",
@@ -169,8 +153,7 @@
         "description": "Halo",
         "certificate": "A",
         "image": "https://cdn.sanity.io/images/lbhlofgm/production/3b4fc7f64088a44066adbceab0236791a45431a4-1500x1566.jpg?w=1500&h=1566&auto=format",
-        "price": 2000,
-        "stars": 5
+        "price": 2000
     },
     {
         "id": "17",
@@ -180,8 +163,7 @@
         "certificate": "D",
         "image": "https://boutique.plaine-altitude.com/9157-large_default/ozone-submarine-parapente.jpg",
         "price": 3500,
-        "discountPrice": 3099,
-        "stars": 5
+        "discountPrice": 3099
     },
     {
         "id": "18",
@@ -191,8 +173,7 @@
         "certificate": "A",
         "image": "https://planetparagliding.com.au/cdn/shop/products/g15_800x.jpg?v=1557559423",
         "price": 2500,
-        "discountPrice": 1999,
-        "stars": 5
+        "discountPrice": 1999
     },
     {
         "id": "19",
@@ -201,8 +182,7 @@
         "description": "New Ozium 2",
         "certificate": "A",
         "image": "https://planetparagliding.com.au/cdn/shop/products/g15_800x.jpg?v=1557559423",
-        "price": 500,
-        "stars": 5
+        "price": 500
     },
     {
         "id": "20",
@@ -211,7 +191,26 @@
         "description": "New Submarine",
         "certificate": "D",
         "image": "https://boutique.plaine-altitude.com/9157-large_default/ozone-submarine-parapente.jpg",
-        "price": 900,
-        "stars": 5
+        "price": 900
+    },
+    {
+        "id": "21",
+        "type": "wing",
+        "title": "Advance",
+        "description": "Pi 3",
+        "certificate": "B",
+        "image": "https://www.paragliding-academy.com/wordpress/wp-content/uploads/2020/08/Advance-Pi3.jpg",
+        "price": 3500,
+        "discountPrice": 2999
+    },
+    {
+        "id": "21.1",
+        "type": "harness",
+        "title": "Advance",
+        "description": "Lightness 3",
+        "certificate": "D",
+        "image": "https://www.ridair.fr/435-large_default/advance-lightness-3-sellette-cocon-legere.jpg",
+        "price": 2999,
+        "discountPrice": 1999
     }
 ]

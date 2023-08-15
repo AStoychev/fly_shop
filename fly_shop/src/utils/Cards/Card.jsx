@@ -8,7 +8,6 @@ import styles from '../../components/allproducts/Products.module.css'
 
 export const Card = ({
     item,
-    // onAdd,
 }) => {
     const [message, setMessage] = useState("")
 

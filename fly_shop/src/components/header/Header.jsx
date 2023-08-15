@@ -20,7 +20,7 @@ export const Header = () => {
                         <Link className={styles.navLink} to="/harnesses">Harnesses</Link>
 
                         <Link className={styles.logo} to="/">
-                            <div>FlyShop 2023
+                            <div>FlyShop
                                 <img src='../images/paper-plane.png' alt='logo'/>
                             </div>
                         </Link>

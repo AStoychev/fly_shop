@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Accordion from 'react-bootstrap/Accordion';
-
 import { borderCasesPrice } from '../../functions/borderCasesPrice';
 
 import { brandConstants, certificateConstants, priceConstants } from '../../data/constants';
+
+import Accordion from 'react-bootstrap/Accordion';
 
 import styles from './Accordion.module.css'
 
@@ -61,7 +61,6 @@ export const AccordionFilter = ({
                                 onChange={onPriceChange}
                             />
                             {borderCasesPrice(item)}$
-                             {/* {item}$ */}
                         </label>
                     ))}
                 </Accordion.Body>

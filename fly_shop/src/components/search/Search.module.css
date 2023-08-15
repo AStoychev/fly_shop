@@ -1,0 +1,67 @@
+.searchBar {
+    padding-left: 95%;
+}
+
+.searchContainer {
+    width: 300px;
+    position: relative;
+    right: 280px;
+    bottom: 41px;
+}
+
+.searchInner {
+    position: relative;
+    height: 43px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.searchInput {
+    height: 34px;
+    width: 60%;
+    padding: 0;
+    line-height: 30px;
+    font-size: 20px;
+    padding: 3px;
+    margin-left: 20px;
+    border: none;
+
+}
+
+.searchBtn {
+    position: absolute;
+    height: 36px;
+    margin-left: 5px;
+    color: white;
+    border: none;
+    width: 30%;
+    font-weight: bold;
+}
+
+.dropdownRow {
+    position: absolute;
+    width: 166px;
+    height: 30px;
+    border: solid;
+    border-width: thin;
+    left: 20px;
+    top: -5px;
+    padding-left: 3px;
+    background-color: rgb(173, 195, 199);
+    cursor: pointer;
+}
+
+.notFoundField {
+    position: absolute;
+    width: 170px;
+    padding-left: 1px;
+    margin-left: 20px;
+    border: solid;
+    border-width: thin;
+    background-color: rgb(173, 195, 199);
+    margin-bottom: 20px;
+}
+
+.spanNotFound {
+    color: rgb(82, 122, 255);
+}

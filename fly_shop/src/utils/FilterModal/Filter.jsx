@@ -1,5 +1,6 @@
 import { AccordionFilter } from '../Accordion/Accordion';
 
+import { onlyUnique } from '../../functions/onlyUnique';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
@@ -19,6 +20,11 @@ export const Filter = ({
     product,
 }) => {
 
+    let filtred = []
+    filtredItem.map(x => (
+        filtred.push(x.id)
+    ))
+
     return (
         <>
             <div >
@@ -34,7 +40,7 @@ export const Filter = ({
             >
                 <Modal.Header closeButton>
                     <Modal.Title id="example-modal-sizes-title-lg">
-                        Filtered Products {filtredItem.length}
+                        Filtered Products {filtred.filter(onlyUnique).length}
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>

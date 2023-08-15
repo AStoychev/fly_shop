@@ -2,7 +2,10 @@ import { useState, useEffect } from 'react';
 
 import { sortAlphabeticallyFunction } from '../../functions/sortAlphabetically';
 import { sortByPriceFunction } from '../../functions/sortByPriceFunction';
+import { onlyUnique } from '../../functions/onlyUnique';
 import { filterPrimary } from '../../functions/filtrPrimary';
+
+import { Search } from '../search/Search';
 
 import { CategoryNameDescription } from '../../utils/CategoryNameDescription/CategoryNameDescription';
 import { AccordionFilter } from '../../utils/Accordion/Accordion';
@@ -79,18 +82,39 @@ export const AllProducts = () => {
     const onFilter = () => {
         if (lgShow) {
             setChecked([]);
+            setCertificate("");
+            setPrice("");
         }
         if (filtredItem.length > 0) {
-            setItems(filtredItem);
+            setItems(filtredItem.filter(onlyUnique));
             setFiltred(true);
             setLgShow(false);
         }
         setLgShow(false)
     }
 
+    // Search
+    const getDataFromSearch = (newData) => {
+        let searchData = []
+        for (let i in data) {
+            if (data[i].title === newData)
+                searchData.push(data[i])
+
+        }
+        if (searchData.length) {
+            setItems(searchData);
+            setFiltred(true);
+        }
+    }
+
     return (
         <div className={styles.productContainer}>
             <div id="app" className="container">
+
+                {/* <div>
+                    <Search getDataFromSearch={getDataFromSearch} />
+                </div> */}
+
                 <CategoryNameDescription props={"All product"} />
 
                 <div className={styles.productAndSortItem}>

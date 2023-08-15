@@ -1,7 +1,10 @@
 .discountOrPrice {
-    /* margin: auto; */
-    width: 100%;
-    padding-left: 13%;
+    display: flex;
+    justify-content: center;
+
+    /* Old code change position after resizing display */
+    /* width: 100%;
+    padding-left: 13%; */
 }
 
 .oldPrice {

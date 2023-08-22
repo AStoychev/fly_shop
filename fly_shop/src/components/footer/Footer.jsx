@@ -8,8 +8,8 @@ export const Footer = () => {
     return (
         <div className={styles.footer}>
             <div className={styles.paragraphFooter}>
-                FlyShop is create for <Link to="https://www.c4nexus.com/" target="_blank" rel="noopener noreferrer" className={styles.linkNexus}>
-                    C4 Nexus
+                FlyShop is made by <Link to="https://github.com/AStoychev" target="_blank" rel="noopener noreferrer" className={styles.linkGitHub}>
+                    A.Stoychev
                 </Link>
             </div>
             <div className={styles.paragraphFooter}>

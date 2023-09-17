@@ -8,7 +8,7 @@ How to start project:
 - Again start command: `npm i`
 - And after that start the project with command: `npm start`
 
-You can see the application on: [FlyShop](https://flyshop.onrender.com/)
+You can see the application here: [FlyShop](https://flyshop.onrender.com/)
 
 I manage to do about 95% of the task. In my opinion :). I suppose I can refactor some of code if I use a context provider or a state management tool.
 The application has been tested on the following browsers: Google Chrome, Firefox, Edge.

@@ -14,7 +14,7 @@
         "title": "Advance",
         "description": "Omega 10",
         "certificate": "D",
-        "image": "https://www.flugschule-mergenthaler.de/wp-content/uploads/OXA-3-Default-View1000x1000px.webp",
+        "image": "https://www.ridair.fr/263-large_default/advance-omega-xalps-3-paraglider-en-d-.jpg",
         "price": 3500
     },
     {
@@ -33,7 +33,7 @@
         "title": "Advance",
         "description": "Sigma 11",
         "certificate": "C",
-        "image": "https://www.flugschule-mergenthaler.de/wp-content/uploads/Sigma-11-Default-View-1000x1000px.webp",
+        "image": "https://www.ridair.fr/253-large_default/advanced-sigma-11-paraglider-en-c-.jpg",
         "price": 4100
     },
     {
@@ -89,7 +89,7 @@
         "title": "Niviuk",
         "description": "Takoo 5",
         "certificate": "B",
-        "image": "https://niviuk.com/tmp/images/BIBLIOTECA_ITEMS_331_TAKOO_5_NIVIUK_PARAGLIDERS_W_400_Q_75.PNG",
+        "image": "https://www.ridair.fr/51-large_default/niviuk-takoo-5-parapente-biplace.jpg",
         "price": 3050
     },
     {
@@ -199,7 +199,7 @@
         "title": "Advance",
         "description": "Pi 3",
         "certificate": "B",
-        "image": "https://www.paragliding-academy.com/wordpress/wp-content/uploads/2020/08/Advance-Pi3.jpg",
+        "image": "https://www.skysummits.com/pub/media/catalog/product/cache/320e3764c7e123557e523cee17cab77a/b/9/b9aad7f8-e0e2-4f4c-a38e-1073f5eaf8c8_1_105_c.jpeg",
         "price": 3500,
         "discountPrice": 2999
     },

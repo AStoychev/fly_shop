@@ -24,6 +24,7 @@
     width: 30px;
     height: 30px;
     margin: 0 5px;
+    transition: 0.3s;
 }
 
 .imageFooter:hover {
@@ -36,6 +37,7 @@
     text-decoration: none;
     font-style: italic;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .linkGitHub:hover {
